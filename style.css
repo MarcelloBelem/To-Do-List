@@ -11,6 +11,21 @@
     --colorWhite: #fff;
 }
 
+/*  Animações  */
+@keyframes float {
+    0% {
+        padding: 5px 20px;
+    }
+
+    50% {
+        padding: 15px 30px;
+    }
+
+    100% {
+        padding: 5px 20px;
+    }
+}
+
 /*  Estilizações Gerais  */
 
 i {
@@ -20,6 +35,8 @@ i {
 button {
     color: var(--colorsecondary);
     background-color: var(--colorMainDark);
+    pointer-events: painted;
+    z-index: 10
 }
 
 button:hover {
@@ -34,7 +51,7 @@ button:hover {
     border-radius: 10px;
 
     input {
-        width: 30ch;
+        width: 25ch;
         padding: 10px;
         background-color: var(--colorMainLight);
         border: none;
@@ -57,15 +74,19 @@ button:hover {
     }
 }
 
+
+
 /*  Estilizações Especificas  */
 
 body {
     background: linear-gradient(90deg, #1C2541, #3A506B);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .todoContainer {
-    width: 300px;
-    margin: auto;
+    width: 340px;
     margin-top: 70px;
     background: #fff;
     border-radius: 10px;
@@ -80,10 +101,80 @@ body {
 
 .todoForm {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin: 10px 0;
+    border-bottom: 4px solid var(--colorMainDark);
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    .controls {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
 }
 
 .editForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+
+    #cancelEdit {
+        padding: 5px 20px;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.5rem;
+    }
+
+    #cancelEdit:hover {
+        background-color: red;
+        animation: float 2.5s infinite;
+    }
+}
+
+.todoListClass {
+    display: flex;
+    justify-content: center;
+}
+
+.todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    border-bottom: 3px solid var(--colorMainDark);
+
+    p {
+        margin-right: 20px;
+        font-weight: bolder;
+    }
+
+    button {
+        padding: 10px;
+        margin-right: 3px;
+        border-radius: 5px;
+        background-color: white;
+
+        i {
+            color: #0B132B;
+        }
+    }
+
+    button:hover {
+        background-color: var(--colorMainDark);
+        
+        i {
+            color: var(--colorWhite);
+        }
+    }
+}
+
+.nowView {
     display: none;
 }

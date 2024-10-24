@@ -26,27 +26,29 @@
             <h1>To Do List</h1>
         </header>
         <form class="todoForm">
-            <dvi class="controls">
+            <h1>-- Add Todo --</h1>
+            <div class="controls">
                 <input type="text" name="" id="todoInput" placeholder="Adicione sua Tarefa">
                 <button type="submit">
                     <i class="fa-solid fa-plus"></i>
                 </button>
-            </dvi>
+            </div>
         </form>
-        <form class="editForm">
+        <form class="editForm nowView">
+            <h1>-- Edit --</h1>
             <div class="controls">
                 <input type="text" name="" id="todoInput" placeholder="Adicione sua Tarefa">
                 <button type="submit">
                     <i class="fa-solid fa-pen-to-square"></i>
                 </button>
             </div>
-            <button>
-                <i class="fa-solid fa-delete-left"></i>
+            <button id="cancelEdit">
+                <i class="fa-solid fa-xmark"></i>
             </button>
         </form>
-        <div id="todoList">
+        <div id="todoList" class="todoListClass">
             <div class="todo">
-                <h3>Estou fazendo algo aqui...</h3>
+                <p>Estou fazendo algo aqui...</p>
                 <button class="finishTodo">
                 <i class="fa-solid fa-check"></i>
                 </button>
@@ -56,7 +58,8 @@
                 </button>
 
                 <button class="removeTodo">
-                <i class="fa-solid fa-xmark"></i>
+                <i class="fa-solid fa-delete-left"></i>
+                
                 </button>
             </div>
         </div>
